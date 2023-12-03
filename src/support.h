@@ -12,9 +12,9 @@
 #define WiFI_SEARCHStrongestAP true                 // when false then the first WiFi access point with matching SSID found is used.
                                                     // when true then the strongest WiFi access point with matching SSID found is used, it doesn't work with hidden SSID
                                                     
-#define WiFI_SEARCH_FOR_STRONGER_AP_INTERVALL 12    // WiFi network re-scan interval in minutes with alternate to +5dB stronger signal if detected
+#define WiFI_SEARCH_FOR_STRONGER_AP_INTERVALL 1440    // WiFi network re-scan interval in minutes with alternate to +5dB stronger signal if detected
 
-#define MQTT_SERVER "192.168.178.111"               // broker name or IP address of the broker
+#define MQTT_SERVER "192.168.1.2"               // broker name or IP address of the broker
 #define MQTT_PORT 1883                              // port number used by the broker
 #define MQTT_USER ""                                // if authentication is not used, leave it empty
 #define MQTT_PASSWORD ""                            // if authentication is not used, leave it empty
@@ -37,7 +37,7 @@
 #define ROOM_TEMP_MQTT_SET_TIMEOUT  40              // time in seconds, after this time w/o receiving a valid room temperature
                                                     // via MQTT fallback to IU temperature sensor value
 
-//#define POWERON_WHEN_CHANGING_MODE true           // uncomment it to switch on the AC when the mode (heat, cool, dry etc.) is changed
+#define POWERON_WHEN_CHANGING_MODE true           // uncomment it to switch on the AC when the mode (heat, cool, dry etc.) is changed
                                                     // used e.g. for home assistant support
 
 #define TROOM_FILTER_LIMIT 0.25                     // Defines from which Troom delta value a new Troom value is pubslised. Resolution 0.25°C.
@@ -48,7 +48,7 @@
 //#define CONTINUE_WITHOUT_MQTT true                  // uncomment if communication with AC has to continue when MQTT or WiFi connection is disconnected.
                                                     // When Troom is supplied from external, it will fallback to AC internal Troom temperature sensor
                                                     // When ROOM_TEMP_DS18X20 is used, it will use room temperature from DS18x20
-//#define USE_EXTENDED_FRAME_SIZE true                // uncomment if you want to use de extended frame size (33) which is used by the WF-RAC module
+#define USE_EXTENDED_FRAME_SIZE true                // uncomment if you want to use de extended frame size (33) which is used by the WF-RAC module
                                                     // Then it will be possible to get and set the 3D auto and vanes left/right
 
 
